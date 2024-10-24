@@ -1,4 +1,4 @@
-﻿@page "/counter"
+@page "/counter"
 @rendermode InteractiveServer
 
 <PageTitle>Counter</PageTitle>
@@ -7,8 +7,11 @@
 
 <p role="status" style="color: @countColor;">Current count: @currentCount</p>
 
-<button class="btn btn-primary" @onclick="IncrementCount">+</button>
-<button class="btn btn-primary" @onclick="SubstractCount">-</button>
+@* 課題1
+<button class="btn btn-primary" @onclick="IncrementCount"></button>
+<button class="btn btn-primary" @onclick="SubstractCount"></button> *@
+<RadzenButton Click=IncrementCount Icon="add" Text="足す" ButtonStyle="Radzen.ButtonStyle.Secondary"></RadzenButton>
+<RadzenButton Click=SubstractCount Icon="remove" Text="引く" ButtonStyle="Radzen.ButtonStyle.Primary"></RadzenButton>
 
 
 @code {
